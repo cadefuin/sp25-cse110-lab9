@@ -96,15 +96,26 @@
       let secondNum = document.querySelector('#second-num').value;
       let operator = document.querySelector('#operator').value;
 
+      class ValidationError extends Error {
+        constructor(message) {
+          super(message);
+          this.name = "ValidationError";
+        }
+      }
+
       try {
         if (firstNum == null || secondNum == null) {
-          throw new SyntaxError('Empty field');
+          throw new SyntaxError('Please fill in both fields.');
+        }
+
+        if (secondNum == 0) {
+          throw new ValidationError('Cannot divide by 0.');
         }
 
         output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
       } catch (err) {
-        if (err.name == 'SyntaxError') {
-          alert('Please fill in both fields.');
+        if (err.name == 'SyntaxError' || err.name == 'ValidationError') {
+          alert(err.message);
         }
 
         if (err.name == 'ReferenceError') {
