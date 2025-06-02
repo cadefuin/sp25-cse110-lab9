@@ -108,7 +108,7 @@
           throw new SyntaxError('Please fill in both fields.');
         }
 
-        if (secondNum == 0) {
+        if (operator == '/' && secondNum == 0) {
           throw new ValidationError('Cannot divide by 0.');
         }
 
