@@ -95,7 +95,17 @@
       let firstNum = document.querySelector('#first-num').value;
       let secondNum = document.querySelector('#second-num').value;
       let operator = document.querySelector('#operator').value;
-      output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
+
+      try {
+        output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
+      } catch (err) {
+        if (err.name == 'ReferenceError') {
+          alert('Please input valid numbers.');
+        }
+      } finally {
+        console.log('Calculator finished executing');
+      }
+      
     });
 
     let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
@@ -104,20 +114,7 @@
     
     // Console Log
     errorBtns[0].onClick = () => {
-      try {
-        let output = document.querySelector('output').value;
-        
-        if (output == null) {
-          throw new Error('No output found');
-        }
-
-        console.log(`Calculator Output: ${output}`);
-      } catch (err) {
-        alert(err.name);
-        alert(err.message);
-      } finally {
-        console.log('Console Log button executed');
-      }
+      console.log('Console log button pressed');
     };
 
     // Console Error
