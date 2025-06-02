@@ -104,7 +104,20 @@
     
     // Console Log
     errorBtns[0].onClick = () => {
-      console.log('Console Log button was clicked');
+      try {
+        let output = document.querySelector('output').value;
+        
+        if (output == null) {
+          throw new Error('No output found');
+        }
+
+        console.log(`Calculator Output: ${output}`);
+      } catch (err) {
+        alert(err.name);
+        alert(err.message);
+      } finally {
+        console.log('Console Log button executed');
+      }
     };
 
     // Console Error
