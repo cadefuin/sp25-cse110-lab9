@@ -104,17 +104,21 @@
       }
 
       try {
-        if (firstNum == null || secondNum == null) {
+        if (firstNum == '' || secondNum == '') {
           throw new SyntaxError('Please fill in both fields.');
         }
 
-        if (operator == '/' && secondNum == 0) {
+        if (operator == '/' && secondNum == '0') {
           throw new ValidationError('Cannot divide by 0.');
         }
 
         output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
       } catch (err) {
-        if (err.name == 'SyntaxError' || err.name == 'ValidationError') {
+        if (err.name == 'SyntaxError') {
+          alert(err.message);
+        }
+
+        if (err.name == 'ValidationError') {
           alert(err.message);
         }
 
