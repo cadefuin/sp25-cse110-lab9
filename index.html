@@ -121,57 +121,57 @@
     // Start your code here
     
     // Console Log
-    errorBtns[0].onClick = () => {
+    errorBtns[0].addEventListener('click', () => {
       console.log('Console log button pressed');
-    };
+    });
 
     // Console Error
-    errorBtns[1].onClick = () => {
+    errorBtns[1].addEventListener('click', () => {
       console.error('This is an error');
-    };
+    });
     
     // Console Count
-    errorBtns[2].onClick = () => {
+    errorBtns[2].addEventListener('click', () => {
       console.count('count');
-    };
+    });
     
     // Console Warn
-    errorBtns[3].onClick = () => {
+    errorBtns[3].addEventListener('click', () => {
       console.warn('This is a warning');
-    };
+    });
     
     // Console Assert
-    errorBtns[4].onClick = () => {
+    errorBtns[4].addEventListener('click', () => {
       console.assert(false, 'This is an assertion');
-    };
+    });
     
     // Console Clear
-    errorBtns[5].onClick = () => {
+    errorBtns[5].addEventListener('click', () => {
       console.clear();
-    };
+    });
     
     // Console Dir
-    errorBtns[6].onClick = () => {
+    errorBtns[6].addEventListener('click', () => {
       console.dir(document.head);
-    };
+    });
     
     // Console dirxml
-    errorBtns[7].onClick = () => {
+    errorBtns[7].addEventListener('click', () => {
       console.dirxml(document);
-    };
+    });
     
     // Console Group Start
-    errorBtns[8].onClick = () => {
+    errorBtns[8].addEventListener('click', () => {
       console.group('Group');
-    };
+    });
     
     // Console Group End
-    errorBtns[9].onClick = () => {
+    errorBtns[9].addEventListener('click', () => {
       console.groupEnd('Group');
-    };
+    });
     
     // Console Table
-    errorBtns[10].onClick = () => {
+    errorBtns[10].addEventListener('click', () => {
       console.table([
         {
           quack: 'yes',
@@ -182,22 +182,22 @@
           woof: 'yes'
         }
       ]);
-    };
+    });
     
     // Start Timer
-    errorBtns[11].onClick = () => {
+    errorBtns[11].addEventListener('click', () => {
       console.time('Timer');
-    };
+    });
     
     // End Timer
-    errorBtns[12].onClick = () => {
+    errorBtns[12].addEventListener('click', () => {
       console.timeEnd('Timer');
-    };
+    });
     
     // Console Trace
-    errorBtns[13].onClick = () => {
+    errorBtns[13].addEventListener('click', () => {
       console.trace();
-    };
+    });
     
     // Trigger a Global Error
     
