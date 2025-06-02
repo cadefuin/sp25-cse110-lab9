@@ -101,7 +101,88 @@
     let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
 
     // Start your code here
-    // You may move this JS to another file if you wish
+    
+    // Console Log
+    errorBtns[0].onClick = () => {
+      console.log('Console Log button was clicked');
+    };
+
+    // Console Error
+    errorBtns[0].onClick = () => {
+      console.error('This is an error');
+    };
+    
+    // Console Count
+    errorBtns[0].onClick = () => {
+      console.count('count');
+    };
+    
+    // Console Warn
+    errorBtns[0].onClick = () => {
+      console.warn('This is a warning');
+    };
+    
+    // Console Assert
+    errorBtns[0].onClick = () => {
+      console.assert(false, 'This is an assertion');
+    };
+    
+    // Console Clear
+    errorBtns[0].onClick = () => {
+      console.clear();
+    };
+    
+    // Console Dir
+    errorBtns[0].onClick = () => {
+      console.dir(document.head);
+    };
+    
+    // Console dirxml
+    errorBtns[0].onClick = () => {
+      console.dirxml(document);
+    };
+    
+    // Console Group Start
+    errorBtns[0].onClick = () => {
+      console.group('Group');
+    };
+    
+    // Console Group End
+    errorBtns[0].onClick = () => {
+      console.groupEnd('Group');
+    };
+    
+    // Console Table
+    errorBtns[0].onClick = () => {
+      console.table([
+        {
+          quack: 'yes',
+          woof: 'no'
+        },
+        {
+          quack: 'no',
+          woof: 'yes'
+        }
+      ]);
+    };
+    
+    // Start Timer
+    errorBtns[0].onClick = () => {
+      console.time('Timer');
+    };
+    
+    // End Timer
+    errorBtns[0].onClick = () => {
+      console.timeEnd('Timer');
+    };
+    
+    // Console Trace
+    errorBtns[0].onClick = () => {
+      console.trace();
+    };
+    
+    // Trigger a Global Error
+    
   </script>
 </body>
 
