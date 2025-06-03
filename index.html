@@ -7,6 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab 9</title>
 
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS && TrackJS.install({ 
+      token: "8838126500cb4b7db3fa7b16aa6f0ba5"
+      // for more configuration options, see https://docs.trackjs.com
+    });
+  </script>
+
   <style>
     button {
       margin: 3px;
@@ -215,6 +223,15 @@
     });
     
     // Trigger a Global Error
+    errorBtns[14].addEventListener('click', () => {
+      boom();
+    });
+
+    // Global Error Handler
+
+    window.onerror = () => {
+      console.log('Global Error detected');
+    }
     
   </script>
 </body>
